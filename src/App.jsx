@@ -36,7 +36,7 @@ export default function App() {
       </Physics>
 
       <Environment background blur={0.75}>
-        <color attach="background" args={['black']} />
+        <color attach="background" args={['#1d1c18']} />
         <Lightformer
           intensity={2}
           color="white"
