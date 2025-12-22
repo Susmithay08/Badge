@@ -101,7 +101,8 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
 
   const { nodes, materials } = useGLTF(TAG_GLB)
 
-  const rawCardImage = useTexture('/photo.png')
+  const rawCardImage = useTexture(import.meta.env.BASE_URL + 'photo.png')
+
 
 
 
