@@ -218,7 +218,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
 
   return (
     <>
-      <group position={[3.2, 4, 0]}>
+      <group position={[3.8, 4, 0]}>
 
 
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
