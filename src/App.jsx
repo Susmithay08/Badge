@@ -30,7 +30,11 @@ export default function App() {
     <Canvas
       camera={{ position: [0, 0, 13], fov: 25 }}
       gl={{ alpha: true }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0)
+      }}
     >
+
 
       <ambientLight intensity={Math.PI} />
 
@@ -39,7 +43,8 @@ export default function App() {
         <Band />
       </Physics>
 
-      <Environment background blur={0.75}>
+      <Environment blur={0.75}>
+
 
         <Lightformer
           intensity={2}
