@@ -9,8 +9,10 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-}
 
-body {
-  background: #111;
+  /* MATCH ABOUT PAGE */
+  background: radial-gradient(1200px 700px at 50% 55%,
+      rgba(255, 255, 255, 0.03),
+      transparent 60%),
+    #1d1c18;
 }

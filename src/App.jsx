@@ -27,7 +27,11 @@ export default function App() {
 
 
   return (
-    <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
+    <Canvas
+      camera={{ position: [0, 0, 13], fov: 25 }}
+      gl={{ alpha: true }}
+    >
+
       <ambientLight intensity={Math.PI} />
 
       <Physics debug={false} interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
@@ -36,7 +40,7 @@ export default function App() {
       </Physics>
 
       <Environment background blur={0.75}>
-        <color attach="background" args={['#1d1c18']} />
+
         <Lightformer
           intensity={2}
           color="white"
