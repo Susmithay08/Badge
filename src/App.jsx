@@ -30,10 +30,9 @@ export default function App() {
     <Canvas
       camera={{ position: [0, 0, 13], fov: 25 }}
       gl={{ alpha: true }}
-      onCreated={({ gl }) => {
-        gl.setClearColor(0x000000, 0)
-      }}
+      onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
     >
+
 
 
       <ambientLight intensity={Math.PI} />
@@ -219,7 +218,8 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[2.6, 4, 0]}>
+
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
 
         <RigidBody ref={j1} position={[0.5, 0, 0]} {...segmentProps}>
