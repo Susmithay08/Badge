@@ -283,7 +283,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
       <mesh ref={band}>
         <meshLineGeometry />
         <meshLineMaterial
-          color="black"
+          color="grey"
           depthTest={false}
           resolution={[width, height]}
           lineWidth={1}
