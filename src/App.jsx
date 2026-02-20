@@ -25,6 +25,14 @@ useGLTF.preload(TAG_GLB)
 
 export default function App() {
 
+  // Forward wheel events to parent page so about.html can still scroll
+  useEffect(() => {
+    const handler = (e) => {
+      window.parent.postMessage({ type: 'wheel', deltaY: e.deltaY }, '*')
+    }
+    window.addEventListener('wheel', handler, { passive: true })
+    return () => window.removeEventListener('wheel', handler)
+  }, [])
 
   return (
     <Canvas
